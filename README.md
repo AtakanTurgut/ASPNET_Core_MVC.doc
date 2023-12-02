@@ -12,4 +12,4 @@ cd basics
 basics> dotnet build
 dotnet run
 dotnet watch
-```
+``` 
