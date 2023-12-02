@@ -13,3 +13,7 @@ basics> dotnet build
 dotnet run
 dotnet watch
 ``` 
+
+```cs
+href="/Home/Index"  ->  asp-controller="Home" asp-action="Index"
+```
