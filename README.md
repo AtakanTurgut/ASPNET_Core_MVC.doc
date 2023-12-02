@@ -1,4 +1,4 @@
-### Dotnet Command Sets
+### dotnet Command Sets
 ```cs
 dotnet
 dotnet --verison
