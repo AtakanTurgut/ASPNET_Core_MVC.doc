@@ -8,4 +8,4 @@ namespace basics.Models
         public string FullName => $"{FirstName} {LastName.ToUpper()}";
         public int Age { get; set; }
     }
-}
+} 
