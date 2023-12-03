@@ -61,6 +61,15 @@ Use this commands for the `Migration Operations`:
     > dotnet ef database drop
 ```
 
+### sqlite Command Sets
+```
+    > sqlite3 .\ProductDb.db
+    sqlite> .tables
+    sqlite> select * from Products;
+    sqlite> .system cls
+    sqlite> .quit
+```
+
 ```cs
 href="/Home/Index"  ->  asp-controller="Home" asp-action="Index"
 ```
