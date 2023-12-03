@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "YXrsCqtl0UjcPbEPq1hLx9EhJeHKGSWQgRH8IrOxAJY=",
+  "Hash": "GKbevSGjF8b7z0MV2kcFIWtg1l7+JVS5Hwwu0RfpSSA=",
   "Source": "StoreApp",
   "BasePath": "_content/StoreApp",
   "Mode": "Default",
@@ -53,6 +53,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\html\\Error.html"
+    },
+    {
+      "Identity": "C:\\Users\\Excalibur\\Desktop\\ASPNET_Core_MVC\\Store\\StoreApp\\wwwroot\\images\\default.jpg",
+      "SourceId": "StoreApp",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Excalibur\\Desktop\\ASPNET_Core_MVC\\Store\\StoreApp\\wwwroot\\",
+      "BasePath": "_content/StoreApp",
+      "RelativePath": "images/default.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\default.jpg"
     },
     {
       "Identity": "C:\\Users\\Excalibur\\Desktop\\ASPNET_Core_MVC\\Store\\StoreApp\\wwwroot\\js\\site.js",
