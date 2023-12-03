@@ -27,7 +27,7 @@ dotnet tool install --global dotnet-ef --version 6.0.0
 ## Used Packages for StoreApp (.\Store\StoreApp)
 - Packages can be installed from the "[.NET CLI](https://learn.microsoft.com/tr-tr/dotnet/core/tools/)".
 ```cs
-dotnet list package
+    > dotnet list package
 ```
 - [Microsoft.EntityFrameworkCore 6.0.0](https://www.nuget.org/packages/Microsoft.EntityFrameworkCore/6.0.0)
 ```
