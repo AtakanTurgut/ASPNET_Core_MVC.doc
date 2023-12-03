@@ -1,8 +1,4 @@
-@model List<StoreApp.Models.Product>
-
-@{
-    Layout = "_Layout";
-}
+@model List<Product>
 
 @section Footer {
     <div>
@@ -10,7 +6,7 @@
     </div>
 }
 
-@foreach (StoreApp.Models.Product product in Model)
+@foreach (Product product in Model)
 {
     <div>
         <h3>@product.ProductName</h3>
@@ -21,3 +17,5 @@
     </div>
     <hr />
 }
+
+<!-- Footer -->
