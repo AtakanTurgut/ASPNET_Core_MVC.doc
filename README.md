@@ -1,5 +1,23 @@
-### dotnet Command Sets
+## Used Packages for StoreApp (.\Store\StoreApp)
+Packages can be installed from the "[.NET CLI](https://learn.microsoft.com/tr-tr/dotnet/core/tools/)".
 ```cs
+    > dotnet list package
+```
+- [Microsoft.EntityFrameworkCore 6.0.0](https://www.nuget.org/packages/Microsoft.EntityFrameworkCore/6.0.0)
+```
+    > dotnet add package Microsoft.EntityFrameworkCore --version 6.0.0
+```
+- [Microsoft.EntityFrameworkCore.Design 6.0.0](https://www.nuget.org/packages/Microsoft.EntityFrameworkCore.Design/6.0.0)
+```
+    > dotnet add package Microsoft.EntityFrameworkCore.Design --version 6.0.0
+```
+- [Microsoft.EntityFrameworkCore.Sqlite 6.0.0](https://www.nuget.org/packages/Microsoft.EntityFrameworkCore.Sqlite/6.0.0)
+```
+    > dotnet add package Microsoft.EntityFrameworkCore.Sqlite --version 6.0.0
+```
+
+### dotnet Command Sets
+```bash
 dotnet
 dotnet --verison
 dotnet --list-sdks
@@ -21,26 +39,23 @@ dotnet sln .\Store.sln list
 dotnet tool -h
 dotnet tool list -h
 dotnet tool list -g
+
 dotnet tool install --global dotnet-ef --version 6.0.0
+dotnet tool install -g Microsoft.Web.LibraryManager.Cli
 ``` 
 
-## Used Packages for StoreApp (.\Store\StoreApp)
-Packages can be installed from the "[.NET CLI](https://learn.microsoft.com/tr-tr/dotnet/core/tools/)".
-```cs
-    > dotnet list package
+### libman Command Sets
+```bash
+libman -h
+libman init -p cdnjs
+libman install -h 
+
+libman install bootstrap -d wwwroot/lib/bootstrap 
+libman install font-awesome -d wwwroot/lib/font-awesome
+libman install jquery -d wwwroot/lib/jquery
 ```
-- [Microsoft.EntityFrameworkCore 6.0.0](https://www.nuget.org/packages/Microsoft.EntityFrameworkCore/6.0.0)
-```
-    > dotnet add package Microsoft.EntityFrameworkCore --version 6.0.0
-```
-- [Microsoft.EntityFrameworkCore.Design 6.0.0](https://www.nuget.org/packages/Microsoft.EntityFrameworkCore.Design/6.0.0)
-```
-    > dotnet add package Microsoft.EntityFrameworkCore.Design --version 6.0.0
-```
-- [Microsoft.EntityFrameworkCore.Sqlite 6.0.0](https://www.nuget.org/packages/Microsoft.EntityFrameworkCore.Sqlite/6.0.0)
-```
-    > dotnet add package Microsoft.EntityFrameworkCore.Sqlite --version 6.0.0
-```
+[[libman]](https://learn.microsoft.com/tr-tr/aspnet/core/client-side/libman/libman-cli?view=aspnetcore-7.0) 
+[[dotnet-ef]](https://learn.microsoft.com/tr-tr/ef/core/cli/dotnet) 
 
 ### Migrations
 Use this commands for the `Migration Operations`:

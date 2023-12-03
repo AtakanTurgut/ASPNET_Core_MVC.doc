@@ -6,16 +6,11 @@
     </div>
 }
 
-@foreach (Product product in Model)
-{
-    <div>
-        <h3>@product.ProductName</h3>
-        <p>@product.Price</p>
-        <p>
-            <a href="/Product/GetOneProductById/@product.ProductId"> Get Details </a>
-        </p>
-    </div>
-    <hr />
-}
+<div class="row my-2">
+    @foreach (Product product in Model)
+    {   
+        <partial name="_ProductCard" model="@product" />
+    }
+</div>
 
 <!-- Footer -->
