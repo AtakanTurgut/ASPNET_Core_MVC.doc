@@ -50,7 +50,7 @@ Use this commands for the `Migration Operations`:
 ```
 - Create Migration
 ```
-    > dotnet ef migrations add init
+    > dotnet ef migrations add init 
 ```
 - Update Data   (Add Configurations)
 ```
