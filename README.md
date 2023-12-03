@@ -12,6 +12,11 @@ cd basics
 basics> dotnet build
 dotnet run
 dotnet watch
+
+dotnet new sln -o Store
+dotnet new web -f net6.0 -o .\Store\StoreApp
+dotnet sln .\Store\ add .\Store\StoreApp\
+dotnet sln .\Store.sln list
 ``` 
 
 ```cs
