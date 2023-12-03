@@ -54,9 +54,10 @@ libman install bootstrap -d wwwroot/lib/bootstrap
 libman install font-awesome -d wwwroot/lib/font-awesome
 libman install jquery -d wwwroot/lib/jquery
 ```
-[[libman]](https://learn.microsoft.com/tr-tr/aspnet/core/client-side/libman/libman-cli?view=aspnetcore-7.0) 
+[libman](https://learn.microsoft.com/tr-tr/aspnet/core/client-side/libman/libman-cli?view=aspnetcore-7.0) 
 <br />
-[[dotnet-ef]](https://learn.microsoft.com/tr-tr/ef/core/cli/dotnet) 
+
+[dotnet-ef](https://learn.microsoft.com/tr-tr/ef/core/cli/dotnet) 
 
 ### Migrations
 Use this commands for the `Migration Operations`:
