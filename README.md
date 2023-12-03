@@ -44,7 +44,7 @@ dotnet tool install --global dotnet-ef --version 6.0.0
 
 ### Migrations
 Use this commands for the `Migration Operations`:
-```
+```cs
     > dotnet ef migrations -h
     > dotnet ef database -h
 ```
@@ -62,7 +62,7 @@ Use this commands for the `Migration Operations`:
 ```
 
 ### sqlite Command Sets
-```
+```sql
     > sqlite3 .\ProductDb.db
     sqlite> .tables
     sqlite> select * from Products;
