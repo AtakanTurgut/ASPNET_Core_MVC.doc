@@ -17,7 +17,7 @@ Packages can be installed from the "[.NET CLI](https://learn.microsoft.com/tr-tr
 ```
 
 ### dotnet Command Sets
-```bash
+```cs
 dotnet
 dotnet --verison
 dotnet --list-sdks
@@ -45,7 +45,7 @@ dotnet tool install -g Microsoft.Web.LibraryManager.Cli
 ``` 
 
 ### libman Command Sets
-```bash
+```cs
 libman -h
 libman init -p cdnjs
 libman install -h 
@@ -55,6 +55,7 @@ libman install font-awesome -d wwwroot/lib/font-awesome
 libman install jquery -d wwwroot/lib/jquery
 ```
 [[libman]](https://learn.microsoft.com/tr-tr/aspnet/core/client-side/libman/libman-cli?view=aspnetcore-7.0) 
+<br />
 [[dotnet-ef]](https://learn.microsoft.com/tr-tr/ef/core/cli/dotnet) 
 
 ### Migrations
