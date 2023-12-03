@@ -42,6 +42,11 @@ dotnet tool list -g
 
 dotnet tool install --global dotnet-ef --version 6.0.0
 dotnet tool install -g Microsoft.Web.LibraryManager.Cli
+
+--06--
+dotnet new classlib -f net6.0 -o .\Store\Entities
+dotnet sln .\Store.sln add .\Entities\
+dotnet add .\StoreApp\ reference .\Entities\
 ``` 
 
 ## libman Command Sets
