@@ -1,4 +1,4 @@
-## Used Packages for StoreApp (.\Store\StoreApp)
+# Used Packages for StoreApp (.\Store\StoreApp)
 Packages can be installed from the "[.NET CLI](https://learn.microsoft.com/tr-tr/dotnet/core/tools/)".
 ```cs
     > dotnet list package
@@ -16,7 +16,7 @@ Packages can be installed from the "[.NET CLI](https://learn.microsoft.com/tr-tr
     > dotnet add package Microsoft.EntityFrameworkCore.Sqlite --version 6.0.0
 ```
 
-### dotnet Command Sets
+## dotnet Command Sets
 ```cs
 dotnet
 dotnet --verison
@@ -44,7 +44,7 @@ dotnet tool install --global dotnet-ef --version 6.0.0
 dotnet tool install -g Microsoft.Web.LibraryManager.Cli
 ``` 
 
-### libman Command Sets
+## libman Command Sets
 ```cs
 libman -h
 libman init -p cdnjs
@@ -59,7 +59,7 @@ libman install jquery -d wwwroot/lib/jquery
 
 [dotnet-ef source](https://learn.microsoft.com/tr-tr/ef/core/cli/dotnet) 
 
-### Migrations
+## Migrations
 Use this commands for the `Migration Operations`:
 ```cs
     > dotnet ef migrations -h
@@ -78,7 +78,7 @@ Use this commands for the `Migration Operations`:
     > dotnet ef database drop
 ```
 
-### sqlite Command Sets
+## sqlite Command Sets
 ```sql
     > sqlite3 .\ProductDb.db
     sqlite> .tables
