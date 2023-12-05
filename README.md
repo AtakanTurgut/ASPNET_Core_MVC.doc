@@ -1,5 +1,6 @@
 # Used Packages for StoreApp 
-Main Project: .\Store\StoreApp
+Main Project: .\Store\StoreApp <br />
+
 Packages can be installed from the "[.NET CLI](https://learn.microsoft.com/tr-tr/dotnet/core/tools/)".
 ```cs
     > dotnet list package
