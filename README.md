@@ -40,6 +40,8 @@ dotnet new web -f net6.0 -o .\Store\StoreApp
 dotnet sln .\Store\ add .\Store\StoreApp\
 dotnet sln .\Store.sln list
 
+---
+
 dotnet tool -h
 dotnet tool list -h
 dotnet tool list -g
