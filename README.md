@@ -75,6 +75,7 @@ dotnet sln .\Store.sln add .\Services\
 
 dotnet add .\Services\ reference .\Entities\
 dotnet add .\Services\ reference .\Repositories\
+dotnet add .\StoreApp\ reference .\Services\
 ``` 
 
 ## libman Command Sets
