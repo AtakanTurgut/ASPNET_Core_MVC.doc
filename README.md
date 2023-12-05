@@ -41,7 +41,6 @@ dotnet sln .\Store\ add .\Store\StoreApp\
 dotnet sln .\Store.sln list
 
 ---
-
 dotnet tool -h
 dotnet tool list -h
 dotnet tool list -g
