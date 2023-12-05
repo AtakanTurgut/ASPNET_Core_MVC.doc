@@ -66,6 +66,13 @@ dotnet remove .\Store\StoreApp\ package Microsoft.EntityFrameworkCore
 dotnet remove .\Store\StoreApp\ package Microsoft.EntityFrameworkCore.Sqlite
 
 dotnet add .\Repositories\ reference .\Entities\
+
+--07--
+dotnet new classlib -f net6.0 -o Services
+dotnet sln .\Store.sln add .\Services\
+
+dotnet add .\Services\ reference .\Entities\
+dotnet add .\Services\ reference .\Repositories\
 ``` 
 
 ## libman Command Sets

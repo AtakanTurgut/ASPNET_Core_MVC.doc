@@ -1,7 +1,5 @@
 using Microsoft.AspNetCore.Mvc;
-using Entities.Models;
-using Repositories;
-using Repositories.Contracts;
+using Services.Contracts;
 
 namespace StoreApp.Controllers
 {
@@ -9,22 +7,23 @@ namespace StoreApp.Controllers
     {
         // Dependency Injection 
         //private readonly RepositoryContext _context;
-        private readonly IRepositoryManager _manager;
+        private readonly IServiceManager _manager;
 
-        public ProductController(IRepositoryManager manager)
+        public ProductController(IServiceManager manager)
         {
             _manager = manager;
         }
 
         public IActionResult Index()
         {
-            var model = _manager.Product.GetAllProducts(false);//.ToList(); == View.Product.Index -> @model List<Product>
+            //var model = _manager.Product.GetAllProducts(false);//.ToList(); == View.Product.Index -> @model List<Product>
+            var model = _manager.ProductService.GetAllProducts(false);//.ToList(); == View.Product.Index -> @model List<Product>
             return View(model);
         }
 
-         public IActionResult GetOneProductById(int id)
+         public IActionResult GetOneProductById([FromRoute(Name = "id")] int id)
         {
-            var model = _manager.Product.GetOneProduct(id, false);
+            var model = _manager.ProductService.GetOneProduct(id, false);
             return View(model);
         }
     }
