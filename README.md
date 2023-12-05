@@ -3,7 +3,7 @@ Packages can be installed from the "[.NET CLI](https://learn.microsoft.com/tr-tr
 ```cs
     > dotnet list package
 ```
-### Repositories
+#### Repositories:
 - [Microsoft.EntityFrameworkCore.Design 6.0.0](https://www.nuget.org/packages/Microsoft.EntityFrameworkCore.Design/6.0.0)
 ```
     > dotnet add package Microsoft.EntityFrameworkCore.Design --version 6.0.0
@@ -12,7 +12,7 @@ Packages can be installed from the "[.NET CLI](https://learn.microsoft.com/tr-tr
 ```
     > dotnet add package Microsoft.EntityFrameworkCore --version 6.0.0
 ```
-### StoreApp
+#### StoreApp:
 - [Microsoft.EntityFrameworkCore.Sqlite 6.0.0](https://www.nuget.org/packages/Microsoft.EntityFrameworkCore.Sqlite/6.0.0)
 ```
     > dotnet add package Microsoft.EntityFrameworkCore.Sqlite --version 6.0.0
