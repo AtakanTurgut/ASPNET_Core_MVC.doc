@@ -168,3 +168,5 @@ C:\Users\Excalibur\Desktop\ASPNET_Core_MVC\Store\StoreApp\bin\Debug\net6.0\Store
 C:\Users\Excalibur\Desktop\ASPNET_Core_MVC\Store\StoreApp\bin\Debug\net6.0\libman.json
 C:\Users\Excalibur\Desktop\ASPNET_Core_MVC\Store\StoreApp\bin\Debug\net6.0\Entities.dll
 C:\Users\Excalibur\Desktop\ASPNET_Core_MVC\Store\StoreApp\bin\Debug\net6.0\Entities.pdb
+C:\Users\Excalibur\Desktop\ASPNET_Core_MVC\Store\StoreApp\bin\Debug\net6.0\Repositories.dll
+C:\Users\Excalibur\Desktop\ASPNET_Core_MVC\Store\StoreApp\bin\Debug\net6.0\Repositories.pdb

@@ -1,17 +1,17 @@
-using Microsoft.EntityFrameworkCore;
+﻿using Microsoft.EntityFrameworkCore;
 using Entities.Models;
 
-namespace StoreApp.Models
+namespace Repositories
 {
     public class RepositoryContext : DbContext
     {
         public DbSet<Product> Products { get; set; }
+        public DbSet<Category> Categories { get; set; }
 
         public RepositoryContext(DbContextOptions<RepositoryContext> options) : base(options)
         {
 
         }
-
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
@@ -24,6 +24,14 @@ namespace StoreApp.Models
                     new Product() { ProductId = 4, ProductName = "Monitor", Price = 4_800 },
                     new Product() { ProductId = 5, ProductName = "Printer", Price = 3_200 }
                 );
+
+            modelBuilder.Entity<Category>()
+                .HasData(
+                    new Category() { CategoryId = 1, CategoryName = "Electronic" },
+                    new Category() { CategoryId = 2, CategoryName = "Accessory" },
+                    new Category() { CategoryId = 3, CategoryName = "External" }
+                );
         }
+
     }
 }

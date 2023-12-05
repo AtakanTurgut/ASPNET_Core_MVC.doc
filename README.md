@@ -3,18 +3,22 @@ Packages can be installed from the "[.NET CLI](https://learn.microsoft.com/tr-tr
 ```cs
     > dotnet list package
 ```
-- [Microsoft.EntityFrameworkCore 6.0.0](https://www.nuget.org/packages/Microsoft.EntityFrameworkCore/6.0.0)
-```
-    > dotnet add package Microsoft.EntityFrameworkCore --version 6.0.0
-```
+### Repositories
 - [Microsoft.EntityFrameworkCore.Design 6.0.0](https://www.nuget.org/packages/Microsoft.EntityFrameworkCore.Design/6.0.0)
 ```
     > dotnet add package Microsoft.EntityFrameworkCore.Design --version 6.0.0
 ```
+- [Microsoft.EntityFrameworkCore 6.0.0](https://www.nuget.org/packages/Microsoft.EntityFrameworkCore/6.0.0)
+```
+    > dotnet add package Microsoft.EntityFrameworkCore --version 6.0.0
+```
+### StoreApp
 - [Microsoft.EntityFrameworkCore.Sqlite 6.0.0](https://www.nuget.org/packages/Microsoft.EntityFrameworkCore.Sqlite/6.0.0)
 ```
     > dotnet add package Microsoft.EntityFrameworkCore.Sqlite --version 6.0.0
 ```
+
+<hr />
 
 ## dotnet Command Sets
 ```cs
@@ -47,6 +51,20 @@ dotnet tool install -g Microsoft.Web.LibraryManager.Cli
 dotnet new classlib -f net6.0 -o .\Store\Entities
 dotnet sln .\Store.sln add .\Entities\
 dotnet add .\StoreApp\ reference .\Entities\
+
+dotnet new classlib -f net6.0 -o .\Store\Repositories
+dotnet sln .\Store\ add .\Store\Repositories\
+dotnet sln .\Store\ list
+dotnet add .\Store\StoreApp\ reference .\Store\Repositories\
+
+dotnet add .\Store\Repositories\ package Microsoft.EntityFrameworkCore --version 6.0.0
+dotnet add .\Store\Repositories\ package Microsoft.EntityFrameworkCore.Sqlite --version 6.0.0
+dotnet list .\Store\Repositories\ package
+
+dotnet remove .\Store\StoreApp\ package Microsoft.EntityFrameworkCore
+dotnet remove .\Store\StoreApp\ package Microsoft.EntityFrameworkCore.Sqlite
+
+dotnet add .\Repositories\ reference .\Entities\
 ``` 
 
 ## libman Command Sets
@@ -87,6 +105,7 @@ Use this commands for the `Migration Operations`:
 ```sql
     > sqlite3 .\ProductDb.db
     sqlite> .tables
+    sqlite> .mode box
     sqlite> select * from Products;
     sqlite> .system cls
     sqlite> .quit
