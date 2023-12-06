@@ -149,7 +149,6 @@ C:\Users\Excalibur\Desktop\ASPNET_Core_MVC\Store\StoreApp\obj\Debug\net6.0\Store
 C:\Users\Excalibur\Desktop\ASPNET_Core_MVC\Store\StoreApp\obj\Debug\net6.0\StoreApp.MvcApplicationPartsAssemblyInfo.cache
 C:\Users\Excalibur\Desktop\ASPNET_Core_MVC\Store\StoreApp\obj\Debug\net6.0\StoreApp.RazorAssemblyInfo.cache
 C:\Users\Excalibur\Desktop\ASPNET_Core_MVC\Store\StoreApp\obj\Debug\net6.0\StoreApp.RazorAssemblyInfo.cs
-C:\Users\Excalibur\Desktop\ASPNET_Core_MVC\Store\StoreApp\obj\Debug\net6.0\StoreApp.sourcelink.json
 C:\Users\Excalibur\Desktop\ASPNET_Core_MVC\Store\StoreApp\obj\Debug\net6.0\staticwebassets.build.json
 C:\Users\Excalibur\Desktop\ASPNET_Core_MVC\Store\StoreApp\obj\Debug\net6.0\staticwebassets.development.json
 C:\Users\Excalibur\Desktop\ASPNET_Core_MVC\Store\StoreApp\obj\Debug\net6.0\staticwebassets\msbuild.StoreApp.Microsoft.AspNetCore.StaticWebAssets.props
@@ -172,3 +171,4 @@ C:\Users\Excalibur\Desktop\ASPNET_Core_MVC\Store\StoreApp\bin\Debug\net6.0\Repos
 C:\Users\Excalibur\Desktop\ASPNET_Core_MVC\Store\StoreApp\bin\Debug\net6.0\Repositories.pdb
 C:\Users\Excalibur\Desktop\ASPNET_Core_MVC\Store\StoreApp\bin\Debug\net6.0\Services.dll
 C:\Users\Excalibur\Desktop\ASPNET_Core_MVC\Store\StoreApp\bin\Debug\net6.0\Services.pdb
+C:\Users\Excalibur\Desktop\ASPNET_Core_MVC\Store\StoreApp\obj\Debug\net6.0\StoreApp.sourcelink.json
