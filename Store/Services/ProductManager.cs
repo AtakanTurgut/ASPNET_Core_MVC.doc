@@ -28,5 +28,32 @@ namespace Services
             return product;
         }
         
+        public void CreateOneProduct(Product product)
+        {
+            _manager.Product.Create(product);
+            _manager.Save();
+        }
+
+        public void UpdateOneProduct(Product product)
+        {
+            var entity = _manager.Product.GetOneProduct(product.ProductId, true);
+            entity.ProductName = product.ProductName;
+            entity.Price = product.Price;
+
+            _manager.Save();
+        }
+
+        public void DeleteOneProduct(int id)
+        {
+            //Product product = GetOneProduct(id, false) ?? new Product();
+            Product product = GetOneProduct(id, false);
+
+            if (product is not null)
+            {
+                _manager.Product.DeleteOneProduct(product);
+                _manager.Save();
+            }
+        }
+
     }
 }

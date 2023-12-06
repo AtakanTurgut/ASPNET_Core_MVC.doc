@@ -15,15 +15,25 @@ namespace Repositories
 
         public IQueryable<T> FindAll(bool trackChanges)
         {
-            return trackChanges ? _context.Set<T>() 
+            return trackChanges ? _context.Set<T>()
                                 : _context.Set<T>().AsNoTracking();
         }
 
         public T? FindByCondition(Expression<Func<T, bool>> expression, bool trackChanges)
         {
-            
+
             return trackChanges ? _context.Set<T>().Where(expression).SingleOrDefault()
                                 : _context.Set<T>().Where(expression).AsNoTracking().SingleOrDefault();
+        }
+
+        public void Create(T entity)
+        {
+            _context.Set<T>().Add(entity);
+        }
+
+        public void Remove(T entity)
+        {
+            _context.Set<T>().Remove(entity);
         }
     }
 }
