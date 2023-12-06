@@ -126,6 +126,8 @@ Use this commands for the `Migration Operations`:
     sqlite> select * from Products;
     sqlite> .system cls
     sqlite> .quit
+
+    sqlite> insert into Categories(CategoryName) VALUES('Telephone');
 ```
 
 ```cs
