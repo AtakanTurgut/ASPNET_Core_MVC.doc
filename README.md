@@ -110,6 +110,12 @@ Use this commands for the `Migration Operations`:
 - Drop the Database
 ```
     > dotnet ef database drop
+    ? Y
+```
+- Delete Migrations
+```
+    > del .\Migrations\
+    ? A
 ```
 
 ## sqlite Command Sets
