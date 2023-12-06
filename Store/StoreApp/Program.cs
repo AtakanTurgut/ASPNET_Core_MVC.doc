@@ -9,7 +9,8 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddControllersWithViews();
 
 // Database Connection
-builder.Services.AddDbContext<RepositoryContext>(options => {
+builder.Services.AddDbContext<RepositoryContext>(options =>
+{
     options.UseSqlite(builder.Configuration.GetConnectionString("sqlConnection"), b => b.MigrationsAssembly("StoreApp"));
 });
 
@@ -29,9 +30,19 @@ app.UseStaticFiles();
 app.UseHttpsRedirection();
 app.UseRouting();
 
-app.MapControllerRoute(
-    name: "default", 
-    pattern: "{controller=Home}/{action=Index}/{id?}"
-);
+// Areas
+app.UseEndpoints(endpoints =>
+{
+    endpoints.MapAreaControllerRoute(
+        name: "Admin",
+        areaName: "Admin",
+        pattern: "Admin/{controller=Dashboard}/{action=Index}/{id?}"
+    );
+
+    endpoints.MapControllerRoute(
+        name: "default",
+        pattern: "{controller=Home}/{action=Index}/{id?}"
+    );
+});
 
 app.Run();
