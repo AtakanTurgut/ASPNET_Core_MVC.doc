@@ -58,11 +58,17 @@ namespace StoreApp.Migrations
                     b.Property<int?>("CategoryId")
                         .HasColumnType("INTEGER");
 
+                    b.Property<string>("ImageUrl")
+                        .HasColumnType("TEXT");
+
                     b.Property<decimal>("Price")
                         .HasColumnType("TEXT");
 
                     b.Property<string>("ProductName")
                         .IsRequired()
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("Summary")
                         .HasColumnType("TEXT");
 
                     b.HasKey("ProductId");
@@ -76,50 +82,64 @@ namespace StoreApp.Migrations
                         {
                             ProductId = 1,
                             CategoryId = 1,
+                            ImageUrl = "/images/computer.jpg",
                             Price = 9500m,
-                            ProductName = "Computer"
+                            ProductName = "Computer",
+                            Summary = ""
                         },
                         new
                         {
                             ProductId = 2,
                             CategoryId = 2,
+                            ImageUrl = "/images/keyboard.jpg",
                             Price = 400m,
-                            ProductName = "Keyboard"
+                            ProductName = "Keyboard",
+                            Summary = ""
                         },
                         new
                         {
                             ProductId = 3,
                             CategoryId = 2,
+                            ImageUrl = "/images/mouse.jpg",
                             Price = 550m,
-                            ProductName = "Mouse"
+                            ProductName = "Mouse",
+                            Summary = ""
                         },
                         new
                         {
                             ProductId = 4,
                             CategoryId = 3,
+                            ImageUrl = "/images/monitor.jpg",
                             Price = 4800m,
-                            ProductName = "Monitor"
+                            ProductName = "Monitor",
+                            Summary = ""
                         },
                         new
                         {
                             ProductId = 5,
                             CategoryId = 1,
+                            ImageUrl = "/images/printer.jpg",
                             Price = 3200m,
-                            ProductName = "Printer"
+                            ProductName = "Printer",
+                            Summary = ""
                         },
                         new
                         {
                             ProductId = 6,
                             CategoryId = 3,
+                            ImageUrl = "/images/router.jpg",
                             Price = 3200m,
-                            ProductName = "Router"
+                            ProductName = "Router",
+                            Summary = ""
                         },
                         new
                         {
                             ProductId = 7,
                             CategoryId = 3,
+                            ImageUrl = "/images/adapter.jpg",
                             Price = 3200m,
-                            ProductName = "Adapter"
+                            ProductName = "Adapter",
+                            Summary = ""
                         });
                 });
 

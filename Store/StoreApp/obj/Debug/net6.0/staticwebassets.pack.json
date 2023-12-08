@@ -9,8 +9,32 @@
       "PackagePath": "staticwebassets\\html\\Error.html"
     },
     {
-      "Id": "C:\\Users\\Excalibur\\Desktop\\ASPNET_Core_MVC\\Store\\StoreApp\\wwwroot\\images\\default.jpg",
-      "PackagePath": "staticwebassets\\images\\default.jpg"
+      "Id": "C:\\Users\\Excalibur\\Desktop\\ASPNET_Core_MVC\\Store\\StoreApp\\wwwroot\\images\\adapter.jpg",
+      "PackagePath": "staticwebassets\\images\\adapter.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Excalibur\\Desktop\\ASPNET_Core_MVC\\Store\\StoreApp\\wwwroot\\images\\computer.jpg",
+      "PackagePath": "staticwebassets\\images\\computer.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Excalibur\\Desktop\\ASPNET_Core_MVC\\Store\\StoreApp\\wwwroot\\images\\keyboard.jpg",
+      "PackagePath": "staticwebassets\\images\\keyboard.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Excalibur\\Desktop\\ASPNET_Core_MVC\\Store\\StoreApp\\wwwroot\\images\\monitor.jpeg",
+      "PackagePath": "staticwebassets\\images\\monitor.jpeg"
+    },
+    {
+      "Id": "C:\\Users\\Excalibur\\Desktop\\ASPNET_Core_MVC\\Store\\StoreApp\\wwwroot\\images\\mouse.jpeg",
+      "PackagePath": "staticwebassets\\images\\mouse.jpeg"
+    },
+    {
+      "Id": "C:\\Users\\Excalibur\\Desktop\\ASPNET_Core_MVC\\Store\\StoreApp\\wwwroot\\images\\printer.jpg",
+      "PackagePath": "staticwebassets\\images\\printer.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Excalibur\\Desktop\\ASPNET_Core_MVC\\Store\\StoreApp\\wwwroot\\images\\router.jpeg",
+      "PackagePath": "staticwebassets\\images\\router.jpeg"
     },
     {
       "Id": "C:\\Users\\Excalibur\\Desktop\\ASPNET_Core_MVC\\Store\\StoreApp\\wwwroot\\js\\site.js",

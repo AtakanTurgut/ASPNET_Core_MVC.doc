@@ -34,14 +34,6 @@ namespace Services
         
         public void CreateOneProduct(ProductDtoForInsertion productDto)
         {
-            /*
-            Product product = new Product() 
-            {
-                ProductName = productDto.ProductName,
-                Price = productDto.Price,
-                CategoryId = productDto.CategoryId
-            };
-            */
             Product product = _mapper.Map<Product>(productDto);
 
             _manager.Product.Create(product);
@@ -50,13 +42,6 @@ namespace Services
 
         public void UpdateOneProduct(ProductDtoForUpdate productDto)
         {
-            /*
-            var entity = _manager.Product.GetOneProduct(productDto.ProductId, true);
-
-            entity.ProductName = productDto.ProductName;
-            entity.Price = productDto.Price;
-            entity.CategoryId = productDto.CategoryId;
-            */
             var entity = _mapper.Map<Product>(productDto);
             _manager.Product.UpdateOneProduct(entity);
 
@@ -73,7 +58,6 @@ namespace Services
 
         public void DeleteOneProduct(int id)
         {
-            //Product product = GetOneProduct(id, false) ?? new Product();
             Product product = GetOneProduct(id, false);
 
             if (product is not null)
