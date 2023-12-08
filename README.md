@@ -14,6 +14,11 @@ Packages can be installed from the "[.NET CLI](https://learn.microsoft.com/tr-tr
 ```
     > dotnet add package Microsoft.EntityFrameworkCore --version 6.0.0
 ```
+#### Services:
+- [AutoMapper.Extensions.Microsoft.DependencyInjection 12.0.1](https://www.nuget.org/packages/AutoMapper.Extensions.Microsoft.DependencyInjection/)
+```
+    > dotnet add .\Services\ package AutoMapper.Extensions.Microsoft.DependencyInjection
+```
 #### StoreApp:
 - [Microsoft.EntityFrameworkCore.Sqlite 6.0.0](https://www.nuget.org/packages/Microsoft.EntityFrameworkCore.Sqlite/6.0.0)
 ```
@@ -76,6 +81,8 @@ dotnet sln .\Store.sln add .\Services\
 dotnet add .\Services\ reference .\Entities\
 dotnet add .\Services\ reference .\Repositories\
 dotnet add .\StoreApp\ reference .\Services\
+
+dotnet list .\Services\ package
 ``` 
 
 ## libman Command Sets

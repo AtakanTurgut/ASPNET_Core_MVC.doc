@@ -23,5 +23,6 @@ namespace Repositories
 
         public void DeleteOneProduct(Product product) => Remove(product);
 
+        public void UpdateOneProduct(Product product) => Update(product);
     }
 }

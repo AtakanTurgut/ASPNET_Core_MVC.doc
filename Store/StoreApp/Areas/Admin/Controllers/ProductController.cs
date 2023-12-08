@@ -1,3 +1,4 @@
+using Entities.Dtos;
 using Entities.Models;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
@@ -14,6 +15,11 @@ namespace StoreApp.Areas.Admin.Controllers
         {
             _manager = manager;
         }
+        
+        private SelectList GetCategoriesSelectList() 
+        {
+            return new SelectList(_manager.CategoryService.GetAllCategories(false), "CategoryId", "CategoryName", "1");
+        }
 
         public IActionResult Index() 
         {
@@ -25,9 +31,7 @@ namespace StoreApp.Areas.Admin.Controllers
         public IActionResult Create()
         {
             //ViewBag.Categories = _manager.CategoryService.GetAllCategories(false);
-            
-            ViewBag.Categories =
-            new SelectList(_manager.CategoryService.GetAllCategories(false), "CategoryId", "CategoryName", "1");
+            ViewBag.Categories = GetCategoriesSelectList();
 
             return View();
         }
@@ -35,11 +39,11 @@ namespace StoreApp.Areas.Admin.Controllers
         // POST
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public IActionResult Create([FromForm] Product product) 
+        public IActionResult Create([FromForm] ProductDtoForInsertion productDto) 
         {
             if (ModelState.IsValid)
             {
-                _manager.ProductService.CreateOneProduct(product);
+                _manager.ProductService.CreateOneProduct(productDto);
                 return RedirectToAction("Index");
             }
 
@@ -50,18 +54,20 @@ namespace StoreApp.Areas.Admin.Controllers
         // Default [HttpGet]
         public IActionResult Update([FromRoute(Name = "id")] int id) 
         {
-            var model = _manager.ProductService.GetOneProduct(id, false);
+            ViewBag.Categories = GetCategoriesSelectList();
+
+            var model = _manager.ProductService.GetOneProductForUpdate(id, false);
             return View(model);
         }
 
         // POST
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public IActionResult Update(Product product) 
+        public IActionResult Update([FromForm] ProductDtoForUpdate productDto) 
         {
             if (ModelState.IsValid)
             {
-                _manager.ProductService.UpdateOneProduct(product);
+                _manager.ProductService.UpdateOneProduct(productDto);
                 return RedirectToAction("Index");
             }
 

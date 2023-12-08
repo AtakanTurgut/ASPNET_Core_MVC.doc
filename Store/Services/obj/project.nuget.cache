@@ -1,9 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "aJVcSVY/rBxUQAZzGNMfLs5VVGJg3sZwCl1kQB2gFguF5hcZgJFuQo/7TcYsl2aEJuqr6SU/1JIwfHl+bnDkOQ==",
+  "dgSpecHash": "8n8dOxHdCQOW32XLpIh6LI8uyXqUUVv4nAgnoe4whDU7KXnD/aLr6qFfVMXu276OYZ6CGuNzTAziK3uILFdLow==",
   "success": true,
   "projectFilePath": "C:\\Users\\Excalibur\\Desktop\\ASPNET_Core_MVC\\Store\\Services\\Services.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\Excalibur\\.nuget\\packages\\automapper\\12.0.1\\automapper.12.0.1.nupkg.sha512",
+    "C:\\Users\\Excalibur\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\12.0.1\\automapper.extensions.microsoft.dependencyinjection.12.0.1.nupkg.sha512",
+    "C:\\Users\\Excalibur\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512",
     "C:\\Users\\Excalibur\\.nuget\\packages\\microsoft.data.sqlite.core\\6.0.0\\microsoft.data.sqlite.core.6.0.0.nupkg.sha512",
     "C:\\Users\\Excalibur\\.nuget\\packages\\microsoft.entityframeworkcore\\6.0.0\\microsoft.entityframeworkcore.6.0.0.nupkg.sha512",
     "C:\\Users\\Excalibur\\.nuget\\packages\\microsoft.entityframeworkcore.abstractions\\6.0.0\\microsoft.entityframeworkcore.abstractions.6.0.0.nupkg.sha512",
