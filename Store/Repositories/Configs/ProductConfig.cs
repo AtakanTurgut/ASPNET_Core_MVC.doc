@@ -18,8 +18,8 @@ namespace Repositories.Configs
                     new Product() { ProductId = 3, CategoryId = 2, ImageUrl = "/images/mouse.jpg", ProductName = "Mouse", Price = 550 },
                     new Product() { ProductId = 4, CategoryId = 3, ImageUrl = "/images/monitor.jpg", ProductName = "Monitor", Price = 4_800 },
                     new Product() { ProductId = 5, CategoryId = 1, ImageUrl = "/images/printer.jpg", ProductName = "Printer", Price = 3_200 },
-                    new Product() { ProductId = 6, CategoryId = 3, ImageUrl = "/images/router.jpg", ProductName = "Router", Price = 3_200 },
-                    new Product() { ProductId = 7, CategoryId = 3, ImageUrl = "/images/adapter.jpg", ProductName = "Adapter", Price = 3_200 }
+                    new Product() { ProductId = 6, CategoryId = 3, ImageUrl = "/images/router.jpg", ProductName = "Router", Price = 5_500 },
+                    new Product() { ProductId = 7, CategoryId = 3, ImageUrl = "/images/adapter.jpg", ProductName = "Adapter", Price = 920 }
                 );
                                                                 // StoreApp/wwwroot/images/..jpg
         }
