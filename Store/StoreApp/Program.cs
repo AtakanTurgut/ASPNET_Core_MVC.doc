@@ -1,3 +1,4 @@
+using System.Net;
 using Microsoft.EntityFrameworkCore;
 using Repositories;
 using Repositories.Contracts;
@@ -6,7 +7,11 @@ using Services.Contracts;
 
 var builder = WebApplication.CreateBuilder(args);
 
+// Controller -View
 builder.Services.AddControllersWithViews();
+
+// Razor Pages
+builder.Services.AddRazorPages();
 
 // Database Connection
 builder.Services.AddDbContext<RepositoryContext>(options =>
@@ -46,6 +51,9 @@ app.UseEndpoints(endpoints =>
         name: "default",
         pattern: "{controller=Home}/{action=Index}/{id?}"
     );
+
+    // Razor Pages
+    endpoints.MapRazorPages();
 });
 
 app.Run();
