@@ -136,7 +136,7 @@ Use this commands for the `Migration Operations`:
 
     sqlite> insert into Categories(CategoryName) VALUES('Telephone');
 ```
-
+ 
 ```cs
 href="/Home/Index"  ->  asp-controller="Home" asp-action="Index"
 ```
