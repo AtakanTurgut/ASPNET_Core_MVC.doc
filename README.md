@@ -106,7 +106,7 @@ Use this commands for the `Migration Operations`:
     > dotnet ef migrations -h
     > dotnet ef database -h
 ```
-- Create Migration
+- Create Migration  
 ```
     > dotnet ef migrations add init 
 ```
