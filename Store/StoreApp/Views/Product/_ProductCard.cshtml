@@ -1,16 +1,27 @@
 @model Product
 
-<div class="col-sm-6 col-md-3 my-2">
+<div class="col-sm-6 col-md-4 my-2">
     <div class="card" style="width: 18rem;">
-        <img src="/images/default.jpg" class="card-img-top" alt="...">
+        <img src="@Model?.ImageUrl" class="card-img-top" alt="...">
         <div class="card-body">
             <h5 class="card-title">@Model.ProductName</h5>
             <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
                 content.</p>
             <p>@Model.Price.ToString("c")</p>
-            <a class="btn btn-primary" asp-action="GetOneProductById" asp-route-id="@Model.ProductId">
-                <i class="fa-solid fa-magnifying-glass"></i> Get Details
-            </a>
+            <div class="btn btn-group">
+                <a class="btn btn-primary" asp-action="GetOneProductById" asp-route-id="@Model.ProductId">
+                    <i class="fa-solid fa-magnifying-glass"></i> Details
+                </a>
+                &nbsp;
+                <form id="@Model.ProductId" asp-page="/cart" method="post">
+                    <input type="hidden" asp-for="ProductId" />
+                    <input type="hidden" name="returnUrl" value="/Product/GetOneProductById/@Model.ProductId" />
+
+                    <button type="submit" class="btn btn-outline-success">
+                        <i class="fa fa-cart-plus"></i>
+                    </button>
+                </form>
+            </div>
         </div>
     </div>
 </div>

@@ -1,14 +1,39 @@
+using System.Net;
+using Entities.Models;
 using Microsoft.EntityFrameworkCore;
-using StoreApp.Models;
+using Repositories;
+using Repositories.Contracts;
+using Services;
+using Services.Contracts;
 
 var builder = WebApplication.CreateBuilder(args);
 
+// Controller -View
 builder.Services.AddControllersWithViews();
 
+// Razor Pages
+builder.Services.AddRazorPages();
+
 // Database Connection
-builder.Services.AddDbContext<RepositoryContext>(options => {
-    options.UseSqlite(builder.Configuration.GetConnectionString("sqlConnection"));
+builder.Services.AddDbContext<RepositoryContext>(options =>
+{
+    options.UseSqlite(builder.Configuration.GetConnectionString("sqlConnection"), b => b.MigrationsAssembly("StoreApp"));
 });
+
+// IoC -> Register - Resolve - Dispose
+builder.Services.AddScoped<IRepositoryManager, RepositoryManage>();
+builder.Services.AddScoped<IProductRepository, ProductRepository>();
+builder.Services.AddScoped<ICategoryRepository, CategoryRepository>();
+
+builder.Services.AddScoped<IServiceManager, ServiceManager>();
+builder.Services.AddScoped<IProductService, ProductManager>();
+builder.Services.AddScoped<ICategoryService, CategoryManager>();
+
+//Razor Pages
+builder.Services.AddSingleton<Cart>();  // All users have 1 cart.
+
+// AutoMapper
+builder.Services.AddAutoMapper(typeof(Program));
 
 var app = builder.Build();
 
@@ -17,9 +42,22 @@ app.UseStaticFiles();
 app.UseHttpsRedirection();
 app.UseRouting();
 
-app.MapControllerRoute(
-    name: "default", 
-    pattern: "{controller=Home}/{action=Index}/{id?}"
-);
+// Areas
+app.UseEndpoints(endpoints =>
+{
+    endpoints.MapAreaControllerRoute(
+        name: "Admin",
+        areaName: "Admin",
+        pattern: "Admin/{controller=Dashboard}/{action=Index}/{id?}"
+    );
+
+    endpoints.MapControllerRoute(
+        name: "default",
+        pattern: "{controller=Home}/{action=Index}/{id?}"
+    );
+
+    // Razor Pages
+    endpoints.MapRazorPages();
+});
 
 app.Run();
