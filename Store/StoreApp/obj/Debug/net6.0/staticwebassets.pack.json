@@ -37,6 +37,10 @@
       "PackagePath": "staticwebassets\\images\\router.jpg"
     },
     {
+      "Id": "C:\\Users\\Excalibur\\Desktop\\ASPNET_Core_MVC\\Store\\StoreApp\\wwwroot\\images\\smartphone.jpg",
+      "PackagePath": "staticwebassets\\images\\smartphone.jpg"
+    },
+    {
       "Id": "C:\\Users\\Excalibur\\Desktop\\ASPNET_Core_MVC\\Store\\StoreApp\\wwwroot\\images\\tablet.jpg",
       "PackagePath": "staticwebassets\\images\\tablet.jpg"
     },

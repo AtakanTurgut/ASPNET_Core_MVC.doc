@@ -2,8 +2,19 @@
 
 <!-- Header -->
 
-<h3>@Model.ProductName</h3>
-<p>@Model.Price.ToString("c")</p>
+<div class="row">
+    <div class="col-md-12">
+        <div class="text-center">
+            <h3 class="display-6">
+                @Model.ProductName
+            </h3>
+            <img class="img-fluid shadow rounded my-2" src="@Model?.ImageUrl" alt="@Model.ProductName" width="500"/>
+
+            <p class="lead text-danger">@Model.Price.ToString("c")</p>
+        </div>
+    </div>
+</div>
+
 <div class="btn-group">
     <a class="btn btn-warning" asp-controller="Home" asp-action="Index">
         <i class="fa-solid fa-house"></i> Home 
