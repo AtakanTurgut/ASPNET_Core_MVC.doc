@@ -30,14 +30,19 @@ builder.Services.AddSession(options =>
 });
 builder.Services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();
 
+// Repositories
 // IoC -> Register - Resolve - Dispose
 builder.Services.AddScoped<IRepositoryManager, RepositoryManage>();
 builder.Services.AddScoped<IProductRepository, ProductRepository>();
 builder.Services.AddScoped<ICategoryRepository, CategoryRepository>();
+builder.Services.AddScoped<IOrderRepository, OrderRepository>();
+// Session Management
 
+// Services
 builder.Services.AddScoped<IServiceManager, ServiceManager>();
 builder.Services.AddScoped<IProductService, ProductManager>();
 builder.Services.AddScoped<ICategoryService, CategoryManager>();
+builder.Services.AddScoped<IOrderService, OrderManager>();
 
 //Razor Pages
 //builder.Services.AddSingleton<Cart>();  // All users have 1 cart.
