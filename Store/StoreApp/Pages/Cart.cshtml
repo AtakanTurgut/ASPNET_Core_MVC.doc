@@ -57,7 +57,8 @@
     </table>
     <div class="text-center my-2">
         <div class="btn-group">
-            <a class="btn btn-primary" href="@Model?.ReturnUrl"><i class="fa-solid fa-store"></i> Continue Shopping </a>
+            <a class="btn btn-primary rounded" href="@Model?.ReturnUrl"><i class="fa-solid fa-store"></i> Continue Shopping </a>
+            <a class="btn btn-success rounded mx-2" asp-action="Checkout" asp-controller="Order"><i class="fa-solid fa-bag-shopping"></i> Checkout </a>
         </div>
     </div>
 </div>

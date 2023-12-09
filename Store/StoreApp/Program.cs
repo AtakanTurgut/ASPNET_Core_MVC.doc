@@ -53,6 +53,7 @@ builder.Services.AddAutoMapper(typeof(Program));
 
 var app = builder.Build();
 
+// Pages
 app.UseStaticFiles();
 
 // Session Management
