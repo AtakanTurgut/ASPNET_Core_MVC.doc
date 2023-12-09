@@ -13,15 +13,16 @@ namespace StoreApp.Pages
         public Cart Cart { get; set; }  // IoC
         public string ReturnUrl { get; set; } = "/";
 
-        public CartModel(IServiceManager manager)
+        public CartModel(IServiceManager manager, Cart cartService)
         {
             _manager = manager;
+            Cart = cartService;
         }
 
         public void OnGet(string returnUrl)
         {
             ReturnUrl = returnUrl ?? "/";
-            Cart = HttpContext.Session.GetJson<Cart>("cart") ?? new Cart();
+            //Cart = HttpContext.Session.GetJson<Cart>("cart") ?? new Cart();
         }
 
         public IActionResult OnPost(int productId, string returnUrl)
@@ -30,10 +31,10 @@ namespace StoreApp.Pages
 
             if (product is not null)
             {
-                Cart = HttpContext.Session.GetJson<Cart>("cart") ?? new Cart();
+                //Cart = HttpContext.Session.GetJson<Cart>("cart") ?? new Cart();
                 Cart.AddItem(product, 1);
 
-                HttpContext.Session.SetJson<Cart>("cart", Cart);
+                //HttpContext.Session.SetJson<Cart>("cart", Cart);
             }
 
             return Page();  // returnUrl
@@ -41,9 +42,9 @@ namespace StoreApp.Pages
 
         public IActionResult OnPostRemove(int id, string returnUrl) 
         {
-            Cart = HttpContext.Session.GetJson<Cart>("cart") ?? new Cart();
+            //Cart = HttpContext.Session.GetJson<Cart>("cart") ?? new Cart();
             Cart.RemoveLine(Cart.Lines.First(cl => cl.Product.ProductId.Equals(id)).Product);
-            HttpContext.Session.SetJson<Cart>("cart", Cart);
+            //HttpContext.Session.SetJson<Cart>("cart", Cart);
 
             return Page();
         }
