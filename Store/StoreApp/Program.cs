@@ -20,6 +20,15 @@ builder.Services.AddDbContext<RepositoryContext>(options =>
     options.UseSqlite(builder.Configuration.GetConnectionString("sqlConnection"), b => b.MigrationsAssembly("StoreApp"));
 });
 
+// Session Management
+builder.Services.AddDistributedMemoryCache();
+builder.Services.AddSession(options => 
+{
+    options.Cookie.Name = "StoreApp.Session";
+    options.IdleTimeout = TimeSpan.FromMinutes(10);  // 10min
+});
+builder.Services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();
+
 // IoC -> Register - Resolve - Dispose
 builder.Services.AddScoped<IRepositoryManager, RepositoryManage>();
 builder.Services.AddScoped<IProductRepository, ProductRepository>();
@@ -30,7 +39,8 @@ builder.Services.AddScoped<IProductService, ProductManager>();
 builder.Services.AddScoped<ICategoryService, CategoryManager>();
 
 //Razor Pages
-builder.Services.AddSingleton<Cart>();  // All users have 1 cart.
+//builder.Services.AddSingleton<Cart>();  // All users have 1 cart.
+builder.Services.AddScoped<Cart>();
 
 // AutoMapper
 builder.Services.AddAutoMapper(typeof(Program));
@@ -38,6 +48,9 @@ builder.Services.AddAutoMapper(typeof(Program));
 var app = builder.Build();
 
 app.UseStaticFiles();
+
+// Session Management
+app.UseSession();
 
 app.UseHttpsRedirection();
 app.UseRouting();
