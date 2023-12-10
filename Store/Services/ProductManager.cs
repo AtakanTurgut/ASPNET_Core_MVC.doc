@@ -22,16 +22,22 @@ namespace Services
             return _manager.Product.GetAllProducts(trackChanges);
         }
 
+        public IEnumerable<Product> GetShowcaseProducts(bool trackChanges)
+        {
+            var products = _manager.Product.GetShowcaseProducts(trackChanges);
+            return products;
+        }
+
         public Product? GetOneProduct(int id, bool trackChanges)
         {
             var product = _manager.Product.GetOneProduct(id, trackChanges);
-            
+
             if (product is null)
                 throw new Exception("Product not found!");
 
             return product;
         }
-        
+
         public void CreateOneProduct(ProductDtoForInsertion productDto)
         {
             Product product = _mapper.Map<Product>(productDto);
@@ -47,7 +53,7 @@ namespace Services
 
             _manager.Save();
         }
-        
+
         public ProductDtoForUpdate GetOneProductForUpdate(int id, bool trackChanges)
         {
             var product = GetOneProduct(id, trackChanges);
