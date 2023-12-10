@@ -62,6 +62,9 @@ builder.Services.ConfigureServiceRegistration();
 //builder.Services.AddSingleton<Cart>();  // All users have 1 cart.
 //builder.Services.AddScoped<Cart>(c => SessionCart.GetCart(c));
 
+// Lowecase Routing
+builder.Services.ConfigureRouting();
+
 // AutoMapper
 builder.Services.AddAutoMapper(typeof(Program));
 
