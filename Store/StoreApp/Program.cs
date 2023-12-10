@@ -94,4 +94,7 @@ app.UseEndpoints(endpoints =>
     endpoints.MapRazorPages();
 });
 
+// Extensions - Auto Migrate
+app.ConfigureAndCheckMigration();
+
 app.Run();

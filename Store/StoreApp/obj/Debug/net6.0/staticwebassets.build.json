@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "rPfpBb0AAmksKbIQuisFy+079lW0jXy7F0g6DCXIpxU=",
+  "Hash": "Ab33k7rEDYGcfbRW+zrttJEGt+2rXaKwgDB7ofvpLJ0=",
   "Source": "StoreApp",
   "BasePath": "_content/StoreApp",
   "Mode": "Default",
@@ -224,6 +224,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\images\\tablet.jpg"
+    },
+    {
+      "Identity": "C:\\Users\\Excalibur\\Desktop\\ASPNET_Core_MVC\\Store\\StoreApp\\wwwroot\\images\\webcam.jpg",
+      "SourceId": "StoreApp",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Excalibur\\Desktop\\ASPNET_Core_MVC\\Store\\StoreApp\\wwwroot\\",
+      "BasePath": "_content/StoreApp",
+      "RelativePath": "images/webcam.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\webcam.jpg"
     },
     {
       "Identity": "C:\\Users\\Excalibur\\Desktop\\ASPNET_Core_MVC\\Store\\StoreApp\\wwwroot\\js\\site.js",

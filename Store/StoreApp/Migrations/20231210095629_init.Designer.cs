@@ -11,8 +11,8 @@ using Repositories;
 namespace StoreApp.Migrations
 {
     [DbContext(typeof(RepositoryContext))]
-    [Migration("20231209202034_start")]
-    partial class start
+    [Migration("20231210095629_init")]
+    partial class init
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -134,6 +134,9 @@ namespace StoreApp.Migrations
                         .IsRequired()
                         .HasColumnType("TEXT");
 
+                    b.Property<bool>("ShowCase")
+                        .HasColumnType("INTEGER");
+
                     b.Property<string>("Summary")
                         .HasColumnType("TEXT");
 
@@ -151,6 +154,7 @@ namespace StoreApp.Migrations
                             ImageUrl = "/images/computer.jpg",
                             Price = 9500m,
                             ProductName = "Computer",
+                            ShowCase = true,
                             Summary = ""
                         },
                         new
@@ -160,6 +164,7 @@ namespace StoreApp.Migrations
                             ImageUrl = "/images/keyboard.jpg",
                             Price = 400m,
                             ProductName = "Keyboard",
+                            ShowCase = false,
                             Summary = ""
                         },
                         new
@@ -169,6 +174,7 @@ namespace StoreApp.Migrations
                             ImageUrl = "/images/mouse.jpg",
                             Price = 550m,
                             ProductName = "Mouse",
+                            ShowCase = false,
                             Summary = ""
                         },
                         new
@@ -178,6 +184,7 @@ namespace StoreApp.Migrations
                             ImageUrl = "/images/monitor.jpg",
                             Price = 4800m,
                             ProductName = "Monitor",
+                            ShowCase = false,
                             Summary = ""
                         },
                         new
@@ -187,6 +194,7 @@ namespace StoreApp.Migrations
                             ImageUrl = "/images/printer.jpg",
                             Price = 3200m,
                             ProductName = "Printer",
+                            ShowCase = true,
                             Summary = ""
                         },
                         new
@@ -194,8 +202,9 @@ namespace StoreApp.Migrations
                             ProductId = 6,
                             CategoryId = 3,
                             ImageUrl = "/images/router.jpg",
-                            Price = 3200m,
+                            Price = 5500m,
                             ProductName = "Router",
+                            ShowCase = false,
                             Summary = ""
                         },
                         new
@@ -203,8 +212,39 @@ namespace StoreApp.Migrations
                             ProductId = 7,
                             CategoryId = 3,
                             ImageUrl = "/images/adapter.jpg",
-                            Price = 3200m,
+                            Price = 920m,
                             ProductName = "Adapter",
+                            ShowCase = false,
+                            Summary = ""
+                        },
+                        new
+                        {
+                            ProductId = 8,
+                            CategoryId = 1,
+                            ImageUrl = "/images/smartphone.jpg",
+                            Price = 138500m,
+                            ProductName = "Smartphone",
+                            ShowCase = false,
+                            Summary = ""
+                        },
+                        new
+                        {
+                            ProductId = 9,
+                            CategoryId = 2,
+                            ImageUrl = "/images/webcam.jpg",
+                            Price = 230m,
+                            ProductName = "Webcam",
+                            ShowCase = false,
+                            Summary = ""
+                        },
+                        new
+                        {
+                            ProductId = 10,
+                            CategoryId = 1,
+                            ImageUrl = "/images/tablet.jpg",
+                            Price = 6400m,
+                            ProductName = "Tablet",
+                            ShowCase = true,
                             Summary = ""
                         });
                 });

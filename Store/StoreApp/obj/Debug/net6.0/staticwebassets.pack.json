@@ -45,6 +45,10 @@
       "PackagePath": "staticwebassets\\images\\tablet.jpg"
     },
     {
+      "Id": "C:\\Users\\Excalibur\\Desktop\\ASPNET_Core_MVC\\Store\\StoreApp\\wwwroot\\images\\webcam.jpg",
+      "PackagePath": "staticwebassets\\images\\webcam.jpg"
+    },
+    {
       "Id": "C:\\Users\\Excalibur\\Desktop\\ASPNET_Core_MVC\\Store\\StoreApp\\wwwroot\\js\\site.js",
       "PackagePath": "staticwebassets\\js\\site.js"
     },
