@@ -1,3 +1,4 @@
+using Entities.RequestParameters;
 using Microsoft.AspNetCore.Mvc;
 using Services.Contracts;
 
@@ -14,10 +15,11 @@ namespace StoreApp.Controllers
             _manager = manager;
         }
 
-        public IActionResult Index()
+        public IActionResult Index(ProductRequestParameters p)
         {
             //var model = _manager.Product.GetAllProducts(false);//.ToList(); == View.Product.Index -> @model List<Product>
-            var model = _manager.ProductService.GetAllProducts(false);//.ToList(); == View.Product.Index -> @model List<Product>
+            //var model = _manager.ProductService.GetAllProducts(false);//.ToList(); == View.Product.Index -> @model List<Product>
+            var model = _manager.ProductService.GetAllProductsWithDetails(p);
             return View(model);
         }
 
