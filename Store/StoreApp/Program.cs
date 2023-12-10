@@ -97,4 +97,7 @@ app.UseEndpoints(endpoints =>
 // Extensions - Auto Migrate
 app.ConfigureAndCheckMigration();
 
+// Localization
+app.ConfigureLocalization();
+
 app.Run();
