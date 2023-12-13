@@ -16,46 +16,20 @@ builder.Services.AddControllersWithViews();
 // Razor Pages
 builder.Services.AddRazorPages();
 
-// Database Connection
-/*
-builder.Services.AddDbContext<RepositoryContext>(options =>
-{
-    options.UseSqlite(builder.Configuration.GetConnectionString("sqlConnection"), b => b.MigrationsAssembly("StoreApp"));
-});
-Extensions */
+// Database Connection - Extensions 
 builder.Services.ConfigureDbContext(builder.Configuration);
+// Identity
+builder.Services.ConfigureIdentity();
 
-// Session Management
-/*
-builder.Services.AddDistributedMemoryCache();
-builder.Services.AddSession(options => 
-{
-    options.Cookie.Name = "StoreApp.Session";
-    options.IdleTimeout = TimeSpan.FromMinutes(10);  // 10min
-});
-Extensions */
+// Session Management - Extensions 
 builder.Services.ConfigureSession();
 
-//builder.Services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();
-
-// Repositories
+// Repositories - Extensions
 // IoC -> Register - Resolve - Dispose
-/*
-builder.Services.AddScoped<IRepositoryManager, RepositoryManage>();
-builder.Services.AddScoped<IProductRepository, ProductRepository>();
-builder.Services.AddScoped<ICategoryRepository, CategoryRepository>();
-builder.Services.AddScoped<IOrderRepository, OrderRepository>();
-Extensions */
 builder.Services.ConfigureRepositoryRegistration();
 // Session Management
 
-// Services
-/*
-builder.Services.AddScoped<IServiceManager, ServiceManager>();
-builder.Services.AddScoped<IProductService, ProductManager>();
-builder.Services.AddScoped<ICategoryService, CategoryManager>();
-builder.Services.AddScoped<IOrderService, OrderManager>();
-Extensions */
+// Services Extensions
 builder.Services.ConfigureServiceRegistration();
 
 //Razor Pages
@@ -78,6 +52,11 @@ app.UseSession();
 
 app.UseHttpsRedirection();
 app.UseRouting();
+
+// ^ Routing ^  ***
+// Authorization - Authentication 
+app.UseAuthorization();
+app.UseAuthentication();
 
 // Areas
 app.UseEndpoints(endpoints =>
@@ -102,5 +81,8 @@ app.ConfigureAndCheckMigration();
 
 // Localization
 app.ConfigureLocalization();
+
+// Authentication - Authorization -- Default - Admin - User
+app.ConfigureDefaultAdminUser();
 
 app.Run();

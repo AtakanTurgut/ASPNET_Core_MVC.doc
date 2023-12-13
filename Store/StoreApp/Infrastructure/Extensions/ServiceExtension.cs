@@ -1,4 +1,5 @@
 using Entities.Models;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using Repositories;
 using Repositories.Contracts;
@@ -15,8 +16,24 @@ namespace StoreApp.Infrastructure.Extensions
             services.AddDbContext<RepositoryContext>(options =>
             {
                 options.UseSqlite(configuration.GetConnectionString("sqlConnection"),
-                b => b.MigrationsAssembly("StoreApp"));
+                    b => b.MigrationsAssembly("StoreApp"));
+
+                options.EnableSensitiveDataLogging(true);
             });
+        }
+
+        public static void ConfigureIdentity(this IServiceCollection services)
+        {
+            services.AddIdentity<IdentityUser, IdentityRole>(options => 
+            {
+                options.SignIn.RequireConfirmedAccount = false;
+                options.User.RequireUniqueEmail = true;
+                options.Password.RequireUppercase = false;      // A
+                options.Password.RequireLowercase = false;      // a    
+                options.Password.RequireDigit = false;          // 123
+                options.Password.RequiredLength = 6;            //******
+            })
+            .AddEntityFrameworkStores<RepositoryContext>();
         }
 
         public static void ConfigureSession(this IServiceCollection services)

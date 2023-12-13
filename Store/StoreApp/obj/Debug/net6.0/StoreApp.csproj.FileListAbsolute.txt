@@ -174,3 +174,4 @@ C:\Users\Excalibur\Desktop\ASPNET_Core_MVC\Store\StoreApp\bin\Debug\net6.0\Servi
 C:\Users\Excalibur\Desktop\ASPNET_Core_MVC\Store\StoreApp\obj\Debug\net6.0\StoreApp.sourcelink.json
 C:\Users\Excalibur\Desktop\ASPNET_Core_MVC\Store\StoreApp\bin\Debug\net6.0\AutoMapper.dll
 C:\Users\Excalibur\Desktop\ASPNET_Core_MVC\Store\StoreApp\bin\Debug\net6.0\AutoMapper.Extensions.Microsoft.DependencyInjection.dll
+C:\Users\Excalibur\Desktop\ASPNET_Core_MVC\Store\StoreApp\bin\Debug\net6.0\Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll
