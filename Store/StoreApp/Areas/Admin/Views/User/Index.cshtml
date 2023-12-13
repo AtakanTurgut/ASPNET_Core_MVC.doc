@@ -1,7 +1,7 @@
 @model IEnumerable<IdentityUser>
 
 <div class="text-center my-2">
-    <div class="display6">
+    <div class="display">
         <i class="fa-solid fa-users"></i>
         <b> Users </b>
     </div>
@@ -30,7 +30,7 @@
                     <td></td>
                     <td>
                         <div class="btn-group">
-                            <a class="btn btn-info">
+                            <a class="btn btn-info" asp-action="ResetPassword" asp-route-id="@user.UserName">
                                 <i class="fa-solid fa-unlock-keyhole"></i>
                             </a>
                             <a class="btn btn-warning" asp-action="Update" asp-route-id="@user.UserName"><i class="fa-solid fa-pen-to-square"></i></a>
