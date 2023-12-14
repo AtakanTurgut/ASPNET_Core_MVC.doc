@@ -18,6 +18,7 @@ namespace StoreApp.Areas.Admin.Controllers
 
         public IActionResult Index()
         {
+            ViewData["Title"] = "Users";
             var users = _manager.AuthService.GetAllUsers();
             return View(users);
         }
@@ -25,6 +26,7 @@ namespace StoreApp.Areas.Admin.Controllers
         // GET
         public IActionResult Create()
         {
+            ViewData["Title"] = "Create User";
             return View(new UserDtoForCreation() 
             {
                 Roles = new HashSet<string>(_manager.AuthService.Roles.Select(r => r.Name).ToList())
@@ -45,6 +47,7 @@ namespace StoreApp.Areas.Admin.Controllers
         public async Task<IActionResult> Update([FromRoute(Name = "id")] string id)
         {
             var user = await _manager.AuthService.GetOneUserForUpdate(id);
+            ViewData["Title"] = user.UserName;
             return View(user);
         }
 
@@ -66,6 +69,7 @@ namespace StoreApp.Areas.Admin.Controllers
         // GET
         public async Task<IActionResult> ResetPassword([FromRoute(Name = "id")] string id) 
         {
+            ViewData["Title"] = "Change Password";
             return View(new ResetPasswordDto() 
             {
                 UserName = id

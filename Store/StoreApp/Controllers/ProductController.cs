@@ -18,6 +18,7 @@ namespace StoreApp.Controllers
 
         public IActionResult Index(ProductRequestParameters p)
         {
+            ViewData["Title"] = "Products";
             //var model = _manager.Product.GetAllProducts(false);//.ToList(); == View.Product.Index -> @model List<Product>
             //var model = _manager.ProductService.GetAllProducts(false);//.ToList(); == View.Product.Index -> @model List<Product>
             var products = _manager.ProductService.GetAllProductsWithDetails(p);
@@ -38,6 +39,7 @@ namespace StoreApp.Controllers
          public IActionResult GetOneProductById([FromRoute(Name = "id")] int id)
         {
             var model = _manager.ProductService.GetOneProduct(id, false);
+            ViewData["Title"] = model?.ProductName;
             return View(model);
         }
     }

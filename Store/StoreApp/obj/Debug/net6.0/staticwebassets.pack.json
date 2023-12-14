@@ -17,6 +17,18 @@
       "PackagePath": "staticwebassets\\images\\computer.jpg"
     },
     {
+      "Id": "C:\\Users\\Excalibur\\Desktop\\ASPNET_Core_MVC\\Store\\StoreApp\\wwwroot\\images\\converter.jpg",
+      "PackagePath": "staticwebassets\\images\\converter.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Excalibur\\Desktop\\ASPNET_Core_MVC\\Store\\StoreApp\\wwwroot\\images\\gamepad.jpg",
+      "PackagePath": "staticwebassets\\images\\gamepad.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Excalibur\\Desktop\\ASPNET_Core_MVC\\Store\\StoreApp\\wwwroot\\images\\headphone.jpg",
+      "PackagePath": "staticwebassets\\images\\headphone.jpg"
+    },
+    {
       "Id": "C:\\Users\\Excalibur\\Desktop\\ASPNET_Core_MVC\\Store\\StoreApp\\wwwroot\\images\\keyboard.jpg",
       "PackagePath": "staticwebassets\\images\\keyboard.jpg"
     },

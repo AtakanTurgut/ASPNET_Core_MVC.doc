@@ -19,6 +19,7 @@ namespace StoreApp.Controllers
         // GET
         public IActionResult Login([FromQuery(Name = "ReturnUrl")] string ReturnUrl="/")
         {
+            ViewData["Title"] = "Login";
             return View(new LoginModel() 
             {
                 ReturnUrl = ReturnUrl
@@ -62,6 +63,7 @@ namespace StoreApp.Controllers
         // GET
         public IActionResult Register()
         {
+            ViewData["Title"] = "Register";
             return View();
         }
 
@@ -100,6 +102,7 @@ namespace StoreApp.Controllers
 
         public IActionResult AccessDenied([FromQuery(Name = "ReturnUrl")] string returnUrl) 
         {
+            ViewData["Title"] = "Access Denied";
             return View();
         }
 

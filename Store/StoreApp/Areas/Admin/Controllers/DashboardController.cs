@@ -9,6 +9,8 @@ namespace StoreApp.Areas.Admin.Controllers
     {
         public IActionResult Index() 
         {
+            ViewData["Title"] = "Dashboard";
+            TempData["info"] = $"Welcome back, {DateTime.Now.ToShortTimeString()}.";
             return View();
         }
     }
