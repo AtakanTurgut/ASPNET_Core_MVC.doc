@@ -30,15 +30,15 @@
                     <td user-name="@user.UserName" user-role=""></td>
                     <td>
                         <div class="btn-group">
-                            <a class="btn btn-info rounded" asp-action="ResetPassword" asp-route-id="@user.UserName">
+                            <a data-toggle="tooltip" data-placement="top" title="Change Password" class="btn btn-info rounded" asp-action="ResetPassword" asp-route-id="@user.UserName">
                                 <i class="fa-solid fa-unlock-keyhole"></i>
                             </a>
-                            <a class="btn btn-warning rounded" asp-action="Update" asp-route-id="@user.UserName">
+                            <a data-toggle="tooltip" data-placement="top" title="Edit User" class="btn btn-warning rounded" asp-action="Update" asp-route-id="@user.UserName">
                                 <i class="fa-solid fa-pen-to-square"></i>
                             </a>
                             <form method="post" asp-action="DeleteOneUser">
                                 <input type="hidden" name="UserName" value="@user.UserName" />
-                                <button class="btn btn-danger rounded" type="submit" >
+                                <button data-toggle="tooltip" data-placement="top" title="Delete User" class="btn btn-danger rounded" type="submit" >
                                     <i class="fa-regular fa-circle-xmark"></i>
                                 </button>
                             </form>
@@ -49,3 +49,13 @@
         </tbody>
     </table>
 </div>
+
+@section Scripts
+{
+    <script type="text/javascript">
+        $(document).ready(() => 
+        {
+            $('[data-toggle="tooltip"]').tooltip();
+        });
+    </script>
+}

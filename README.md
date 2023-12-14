@@ -168,6 +168,15 @@ Use this commands for the `Migration Operations`:
     sqlite> insert into Categories(CategoryName) VALUES('Telephone');
 ```
 
+#### Users - Names and Passwords
+```cs
+    Admin:
+        Name: Admin  Password: admin123456.
+    
+    User:
+        Name: Atakan Password: 123456+
+```
+
 ```cs
 href="/Home/Index"  ->  asp-controller="Home" asp-action="Index"
 ```

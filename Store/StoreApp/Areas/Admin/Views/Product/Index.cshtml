@@ -2,6 +2,7 @@
 
 <div class="text-center">
     <div class="display">
+        <i class="fa-solid fa-tags"></i>
         <b> Products (@await Component.InvokeAsync("ProductSummary")) </b>
     </div>
 
@@ -31,11 +32,11 @@
                     <td>@product.Price.ToString("c")</td>
                     <td>
                         <div class="btn-group">
-                            <a class="btn btn-info" target="_blank" asp-area="" asp-controller="Product" asp-action="GetOneProductById" asp-route-id="@product.ProductId">
+                            <a data-toggle="tooltip" data-placement="top" title="Information" class="btn btn-info" target="_blank" asp-area="" asp-controller="Product" asp-action="GetOneProductById" asp-route-id="@product.ProductId">
                                 <i class="fa-solid fa-magnifying-glass"></i>
                             </a>
-                            <a class="btn btn-warning" asp-action="Update" asp-route-id="@product.ProductId"><i class="fa-solid fa-pen-to-square"></i></a>
-                            <a class="btn btn-danger" asp-action="Delete" asp-route-id="@product.ProductId"><i class="fa-regular fa-circle-xmark"></i></a>
+                            <a data-toggle="tooltip" data-placement="top" title="Edit Product" class="btn btn-warning" asp-action="Update" asp-route-id="@product.ProductId"><i class="fa-solid fa-pen-to-square"></i></a>
+                            <a data-toggle="tooltip" data-placement="top" title="Delete Product" class="btn btn-danger" asp-action="Delete" asp-route-id="@product.ProductId"><i class="fa-regular fa-circle-xmark"></i></a>
                         </div>
                     </td>
                 </tr>
@@ -43,3 +44,13 @@
         </tbody>
     </table>
 </div>
+
+@section Scripts
+{
+    <script type="text/javascript">
+        $(document).ready(() => 
+        {
+            $('[data-toggle="tooltip"]').tooltip();
+        });
+    </script>
+}
