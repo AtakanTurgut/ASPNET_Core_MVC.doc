@@ -1,10 +1,12 @@
 using Entities.Dtos;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Services.Contracts;
 
 namespace StoreApp.Areas.Admin.Controllers
 {
     [Area("Admin")]
+    [Authorize(Roles = "Admin")]
     public class UserController : Controller
     {
         private readonly IServiceManager _manager;
@@ -79,5 +81,16 @@ namespace StoreApp.Areas.Admin.Controllers
 
             return result.Succeeded ? RedirectToAction("Index") : View();
         }
+
+        // POST
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> DeleteOneUser([FromForm] UserDto userDto)
+        {
+            var result = await _manager.AuthService.DeleteOneUser(userDto.UserName);
+
+            return result.Succeeded ? RedirectToAction("Index") : View();
+        }
+        
     }
 }

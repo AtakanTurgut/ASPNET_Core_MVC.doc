@@ -27,14 +27,21 @@
                     <td>@user.Id</td>
                     <td>@user.UserName</td>
                     <td>@user.Email</td>
-                    <td></td>
+                    <td user-name="@user.UserName" user-role=""></td>
                     <td>
                         <div class="btn-group">
-                            <a class="btn btn-info" asp-action="ResetPassword" asp-route-id="@user.UserName">
+                            <a class="btn btn-info rounded" asp-action="ResetPassword" asp-route-id="@user.UserName">
                                 <i class="fa-solid fa-unlock-keyhole"></i>
                             </a>
-                            <a class="btn btn-warning" asp-action="Update" asp-route-id="@user.UserName"><i class="fa-solid fa-pen-to-square"></i></a>
-                            <a class="btn btn-danger"><i class="fa-regular fa-circle-xmark"></i></a>
+                            <a class="btn btn-warning rounded" asp-action="Update" asp-route-id="@user.UserName">
+                                <i class="fa-solid fa-pen-to-square"></i>
+                            </a>
+                            <form method="post" asp-action="DeleteOneUser">
+                                <input type="hidden" name="UserName" value="@user.UserName" />
+                                <button class="btn btn-danger rounded" type="submit" >
+                                    <i class="fa-regular fa-circle-xmark"></i>
+                                </button>
+                            </form>
                         </div>
                     </td>
                 </tr>

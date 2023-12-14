@@ -39,6 +39,9 @@ builder.Services.ConfigureServiceRegistration();
 // Lowecase Routing
 builder.Services.ConfigureRouting();
 
+// Application Cookie
+builder.Services.ConfigureApplicationCookie();
+
 // AutoMapper
 builder.Services.AddAutoMapper(typeof(Program));
 
@@ -54,9 +57,9 @@ app.UseHttpsRedirection();
 app.UseRouting();
 
 // ^ Routing ^  ***
-// Authorization - Authentication 
-app.UseAuthorization();
+// Authentication - Authorization
 app.UseAuthentication();
+app.UseAuthorization();
 
 // Areas
 app.UseEndpoints(endpoints =>
