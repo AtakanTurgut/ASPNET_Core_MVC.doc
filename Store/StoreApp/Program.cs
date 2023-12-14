@@ -13,6 +13,10 @@ var builder = WebApplication.CreateBuilder(args);
 // Controller -View
 builder.Services.AddControllersWithViews();
 
+// !!! API Implementation !!!
+builder.Services.AddControllers()
+    .AddApplicationPart(typeof(Presentation.AssemblyReference).Assembly);
+
 // Razor Pages
 builder.Services.AddRazorPages();
 
@@ -77,6 +81,9 @@ app.UseEndpoints(endpoints =>
 
     // Razor Pages
     endpoints.MapRazorPages();
+
+    // !!! API Implementation !!!
+    endpoints.MapControllers();
 });
 
 // Extensions - Auto Migrate

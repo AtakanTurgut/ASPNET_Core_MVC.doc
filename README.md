@@ -1,6 +1,18 @@
-# Used Packages for StoreApp 
+### StoreApp Project Layers
 Main Project: .\Store\StoreApp <br />
+```cs
+    > dotnet list .\StoreApp\ reference
+```
+```cs
+    Entities
+    Repositories => Entities
+    Services     => Entities + Repositories
+    StoreApp     => Entities + Repositories + Services ++ Presentation
 
+    Presentation => Services
+```
+
+# Used Packages for StoreApp 
 Packages can be installed from the "[.NET CLI](https://learn.microsoft.com/tr-tr/dotnet/core/tools/)".
 ```cs
     > dotnet list package
@@ -23,6 +35,11 @@ Packages can be installed from the "[.NET CLI](https://learn.microsoft.com/tr-tr
 - [Microsoft.EntityFrameworkCore.Sqlite 6.0.0](https://www.nuget.org/packages/Microsoft.EntityFrameworkCore.Sqlite/6.0.0)
 ```
     > dotnet add package Microsoft.EntityFrameworkCore.Sqlite --version 6.0.0
+```
+#### Presentation:
+- [Microsoft.AspNetCore.Mvc.Core](https://www.nuget.org/packages/Microsoft.AspNetCore.Mvc.Core/)
+```
+    > dotnet add .\Presentation\ package Microsoft.AspNetCore.Mvc.Core
 ```
 
 <hr />
@@ -85,6 +102,20 @@ dotnet add .\StoreApp\ reference .\Services\
 dotnet list .\Services\ package
 ``` 
 
+# API Implementation 
+```cs
+--17--
+dotnet new classlib -f net6.0 -o Presentation 
+
+dotnet sln .\Store.sln list
+dotnet sln .\Store.sln add .\Presentation\
+
+dotnet add .\Presentation\ package Microsoft.AspNetCore.Mvc.Core
+
+dotnet add .\Presentation\ reference .\Services\
+dotnet add .\StoreApp\ reference .\Presentation\
+```
+
 ## libman Command Sets
 ```cs
 libman -h
@@ -136,7 +167,7 @@ Use this commands for the `Migration Operations`:
 
     sqlite> insert into Categories(CategoryName) VALUES('Telephone');
 ```
- 
+
 ```cs
 href="/Home/Index"  ->  asp-controller="Home" asp-action="Index"
 ```
