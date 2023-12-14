@@ -9,7 +9,7 @@ Main Project: .\Store\StoreApp <br />
     Services     => Entities + Repositories
     StoreApp     => Entities + Repositories + Services ++ Presentation
 
-    Presentation => Services
+    + Presentation => Services
 ```
 
 # Used Packages for StoreApp 
