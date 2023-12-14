@@ -26,6 +26,10 @@ Packages can be installed from the "[.NET CLI](https://learn.microsoft.com/tr-tr
 ```
     > dotnet add package Microsoft.EntityFrameworkCore --version 6.0.0
 ```
+- + [Microsoft.EntityFrameworkCore.SqlServer 6.0.0](https://www.nuget.org/packages/Microsoft.EntityFrameworkCore.SqlServer/6.0.0)
+```
+    > dotnet add .\Repositories\ package Microsoft.EntityFrameworkCore.SqlServer --version 6.0.0
+```
 #### Services:
 - [AutoMapper.Extensions.Microsoft.DependencyInjection 12.0.1](https://www.nuget.org/packages/AutoMapper.Extensions.Microsoft.DependencyInjection/)
 ```
@@ -166,6 +170,21 @@ Use this commands for the `Migration Operations`:
     sqlite> .quit
 
     sqlite> insert into Categories(CategoryName) VALUES('Telephone');
+```
+
+## + SqlServer Configuration
+```cs
+    dotnet list .\Repositories\ package
+    dotnet add .\Repositories\ package Microsoft.EntityFrameworkCore.SqlServer --version 6.0.0
+
+    del .\Migrations\
+    dotnet ef database drop
+```
+```cs
+    - StoreApp.appsettings.json => "ConnectionStrings": { "mssqlConnection": "" }
+    - StoreApp.Infrastructure.Extensions.ServiceExtension.ConfigureDbContext() =>
+            .UseSqlServer() - "mssqlConnection"  -->  mssql db
+            .UseSqlite()    - "sqlConnection"    -->  sqlite db
 ```
 
 #### Users - Names and Passwords
