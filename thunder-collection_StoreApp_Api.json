@@ -1,0 +1,45 @@
+{
+    "client": "Thunder Client",
+    "collectionName": "StoreApp_Api",
+    "dateExported": "2023-12-14T15:51:26.800Z",
+    "version": "1.1",
+    "folders": [],
+    "requests": [
+        {
+            "_id": "881756be-b788-4796-ab0c-46260ebd8ed7",
+            "colId": "520b7361-f547-4045-91f1-26108756b979",
+            "containerId": "",
+            "name": "Products",
+            "url": "https://localhost:7173/api/products",
+            "method": "GET",
+            "sortNum": 10000,
+            "created": "2023-12-14T15:50:38.499Z",
+            "modified": "2023-12-14T15:50:38.499Z",
+            "headers": [
+                {
+                    "name": "Accept",
+                    "value": "*/*",
+                    "isDisabled": true
+                },
+                {
+                    "name": "User-Agent",
+                    "value": "Thunder Client (https://www.thunderclient.com)",
+                    "isDisabled": true
+                },
+                {
+                    "name": "Authorization",
+                    "value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIxIiwiaWF0IjoxNjg2NjY5ODgwLCJleHAiOjE2ODY2NzEwODB9.h_J7l9EeBVRq2WwBiYb5tusp89ZlxXfj5Oz-qFghLcO35OBH-vRXcedhgg3M_q-wXRC2gr8YIVvxz7at9r-rpw"
+                }
+            ],
+            "params": [],
+            "tests": [
+                {
+                    "type": "set-env-var",
+                    "custom": "json.id",
+                    "action": "setto",
+                    "value": "{{userId}}"
+                }
+            ]
+        }
+    ]
+}

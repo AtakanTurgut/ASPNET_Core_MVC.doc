@@ -1,0 +1,37 @@
+@model LoginModel
+
+<div class="text-center my-2">
+    <h6 class="lead">
+        <i class="fa-solid fa-right-to-bracket text-secondary"></i>
+        <b> Login </b>
+    </h6>
+</div>
+
+<div class="row">
+    <div class="col-md-3"></div>
+    <div class="col-md-6">
+        <form method="post" asp-action="Login">
+
+            <input type="hidden" asp-for="ReturnUrl" />
+
+            <div class="form-group my-2">
+                <label asp-for="Name"></label>
+                <input asp-for="Name" class="form-control" />
+            </div>
+            <div class="form-group my-2">
+                <label asp-for="Password"></label>
+                <input type="password" asp-for="Password" class="form-control" />
+            </div>
+            <div class="form-group my-3 d-flex justify-content-center">
+                <button type="submit" class="btn btn-success">
+                    <i class="fa-solid fa-right-to-bracket text-light"></i>
+                    Login
+                </button>
+            </div>
+        </form>
+        <div class="text-center">
+            If you don't have an account. Please <a asp-action="Register"> click here. </a>
+        </div>
+    </div>
+    <div class="col-md-3"></div>
+</div>

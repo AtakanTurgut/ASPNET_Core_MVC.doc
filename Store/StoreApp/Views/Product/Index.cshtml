@@ -1,0 +1,51 @@
+@model ProductListViewModel
+
+@section Footer {
+    <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-light border-bottom box-shadow mb-3">
+        <div class="container">
+            <div class="collapse navbar-collapse d-sm-inline-flex justify-content-between" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link text-dark" aria-current="page" asp-area="" asp-page="/Cart">
+                            <i class="fa-solid fa-cart-shopping"></i> (@await Component.InvokeAsync("CartSummary"))
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" asp-controller="Product" asp-action="Index"> 
+                            Products
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+}
+
+<div class="row">
+    <div class="col-md-3">
+        @await Component.InvokeAsync("CategoriesMenu")
+        @await Component.InvokeAsync("ProductFilterMenu")
+        <div products="" count="6"></div>
+    </div>
+    <div class="col-md-9">
+        <div class="text-left my-2">
+            <h6 class="display-6">
+                Products (@await Component.InvokeAsync("ProductSummary"))
+            </h6>
+        </div>
+
+        <div class="row my-2">
+            @foreach (Product product in Model.Products)
+            {
+                <partial name="_ProductCard" model="@product" />
+            }
+        </div>
+        <div class="text-center">
+            <div page-model="@Model.Pagination" page-action="Index" page-classes-enabled="true" page-class="btn"
+                page-class-normal="btn-light" page-class-selected="btn-secondary" class="btn-group border">
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Footer -->

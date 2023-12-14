@@ -1,0 +1,29 @@
+<div class="text-center text-danger my-3">
+    <h3 class="display-3">
+        <i class="fa fa-solid fa-bug"></i>
+        <br />
+        <b> Access Denied </b>
+    </h3>
+</div>
+
+<div class="text-center">
+    <div class="lead">
+        <b> You have no permission to access this page. Please get in touch with system administrator. </b>
+    </div>
+    <div class="btn-group my-3">
+        <a class="btn btn-secondary rounded" asp-controller="Home" asp-action="Index">
+            <i class="fa-solid fa-house"></i> Home
+        </a>
+        &nbsp;
+        <a class="btn btn-outline-danger rounded" asp-page="/contact">
+            <i class="fa-solid fa-phone"></i> Contact
+        </a>
+        &nbsp;
+        <a class="btn btn-outline-primary rounded" asp-controller="Product" asp-action="Index">
+            <i class="fa-solid fa-list"></i> Products
+        </a>
+    </div>
+    <div class="text-center">
+        <i class="fa fa-solid fa-bug-slash"></i>
+    </div>
+</div>
