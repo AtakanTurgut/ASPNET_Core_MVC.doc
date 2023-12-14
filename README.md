@@ -5,9 +5,9 @@ Main Project: .\Store\StoreApp <br />
 ```
 ```cs
     Entities
-    Repositories => Entities
-    Services     => Entities + Repositories
-    StoreApp     => Entities + Repositories + Services ++ Presentation
+    Repositories  =>  Entities
+    Services      =>  Entities + Repositories
+    StoreApp      =>  Entities + Repositories + Services ++ Presentation
 
     + Presentation => Services
 ```
