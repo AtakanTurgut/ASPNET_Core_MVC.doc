@@ -1,4 +1,4 @@
-### StoreApp Project Layers
+## StoreApp Project Layers
 Main Project: .\Store\StoreApp <br />
 ```cs
     > dotnet list .\StoreApp\ reference
