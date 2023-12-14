@@ -36,7 +36,7 @@ Packages can be installed from the "[.NET CLI](https://learn.microsoft.com/tr-tr
 ```
     > dotnet add package Microsoft.EntityFrameworkCore.Sqlite --version 6.0.0
 ```
-#### Presentation:
+#### + Presentation:
 - [Microsoft.AspNetCore.Mvc.Core](https://www.nuget.org/packages/Microsoft.AspNetCore.Mvc.Core/)
 ```
     > dotnet add .\Presentation\ package Microsoft.AspNetCore.Mvc.Core
