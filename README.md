@@ -17,30 +17,38 @@ Packages can be installed from the "[.NET CLI](https://learn.microsoft.com/tr-tr
 ```cs
     > dotnet list package
 ```
-#### Repositories:
-- [Microsoft.EntityFrameworkCore.Design 6.0.0](https://www.nuget.org/packages/Microsoft.EntityFrameworkCore.Design/6.0.0)
-```
-    > dotnet add package Microsoft.EntityFrameworkCore.Design --version 6.0.0
-```
+### Repositories:
 - [Microsoft.EntityFrameworkCore 6.0.0](https://www.nuget.org/packages/Microsoft.EntityFrameworkCore/6.0.0)
 ```
     > dotnet add package Microsoft.EntityFrameworkCore --version 6.0.0
+```
+- + [Microsoft.EntityFrameworkCore.Sqlite 6.0.0](https://www.nuget.org/packages/Microsoft.EntityFrameworkCore.Sqlite/6.0.0)
+```
+    > dotnet add package Microsoft.EntityFrameworkCore.Sqlite --version 6.0.0
 ```
 - + [Microsoft.EntityFrameworkCore.SqlServer 6.0.0](https://www.nuget.org/packages/Microsoft.EntityFrameworkCore.SqlServer/6.0.0)
 ```
     > dotnet add .\Repositories\ package Microsoft.EntityFrameworkCore.SqlServer --version 6.0.0
 ```
-#### Services:
+- + [MySql.Data.EntityFrameworkCore 6.0.0](https://www.nuget.org/packages/MySql.Data.EntityFrameworkCore/6.0.0)
+```
+    > dotnet add .\Repositories\ package MySql.Data.EntityFrameworkCore --version 6.0.0
+```
+### Services:
 - [AutoMapper.Extensions.Microsoft.DependencyInjection 12.0.1](https://www.nuget.org/packages/AutoMapper.Extensions.Microsoft.DependencyInjection/)
 ```
     > dotnet add .\Services\ package AutoMapper.Extensions.Microsoft.DependencyInjection
 ```
-#### StoreApp:
-- [Microsoft.EntityFrameworkCore.Sqlite 6.0.0](https://www.nuget.org/packages/Microsoft.EntityFrameworkCore.Sqlite/6.0.0)
+### StoreApp:
+- [Microsoft.EntityFrameworkCore.Design 6.0.0](https://www.nuget.org/packages/Microsoft.EntityFrameworkCore.Design/6.0.0)
 ```
-    > dotnet add package Microsoft.EntityFrameworkCore.Sqlite --version 6.0.0
+    > dotnet add package Microsoft.EntityFrameworkCore.Design --version 6.0.0
 ```
-#### + Presentation:
+- + [Pomelo.EntityFrameworkCore.MySql 6.0.0](https://www.nuget.org/packages/Pomelo.EntityFrameworkCore.MySql/6.0.0)
+```
+    > dotnet add .\StoreApp\ package Pomelo.EntityFrameworkCore.MySql --version 6.0.0
+```
+### + Presentation:
 - [Microsoft.AspNetCore.Mvc.Core 2.2.5](https://www.nuget.org/packages/Microsoft.AspNetCore.Mvc.Core/)
 ```
     > dotnet add .\Presentation\ package Microsoft.AspNetCore.Mvc.Core
@@ -121,6 +129,9 @@ dotnet add .\StoreApp\ reference .\Presentation\
 ```
 
 ## libman Command Sets
+```py
+    Client-Side Library -> Manage Client-Side Libraries
+```
 ```cs
 libman -h
 libman init -p cdnjs
@@ -185,6 +196,23 @@ Use this commands for the `Migration Operations`:
     - StoreApp.Infrastructure.Extensions.ServiceExtension.ConfigureDbContext() =>
             .UseSqlServer() - "mssqlConnection"  -->  mssql db
             .UseSqlite()    - "sqlConnection"    -->  sqlite db
+```
+
+## + MySql Configuration
+```cs
+    dotnet add .\Repositories\ package MySql.Data.EntityFrameworkCore --version 6.0.0
+    dotnet add .\StoreApp\ package Pomelo.EntityFrameworkCore.MySql	--version 6.0.0
+
+    del .\Migrations\
+    dotnet ef database drop
+```
+```cs
+    - StoreApp.appsettings.json => "ConnectionStrings": { "mysqlConnection": "" }
+    - StoreApp.Infrastructure.Extensions.ServiceExtension.ConfigureDbContext(),
+                            ServerVersion.AutoDetect() =>
+            .UseSqlServer() - "mssqlConnection"  -->  mssql db
+            .UseSqlite()    - "sqlConnection"    -->  sqlite db
+            .UseMySql()     - "mysqlConnection"  -->  mysql db
 ```
 
 #### Users - Names and Passwords

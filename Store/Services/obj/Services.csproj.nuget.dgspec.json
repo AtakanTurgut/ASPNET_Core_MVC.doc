@@ -1,7 +1,7 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Excalibur\\Desktop\\ASPNET_Core_MVC\\Store\\Services\\Services.csproj": {}
+    "c:\\Users\\Excalibur\\Desktop\\ASPNET_Core_MVC\\Store\\Services\\Services.csproj": {}
   },
   "projects": {
     "C:\\Users\\Excalibur\\Desktop\\ASPNET_Core_MVC\\Store\\Entities\\Entities.csproj": {
@@ -124,6 +124,10 @@
             "Microsoft.EntityFrameworkCore.Sqlite": {
               "target": "Package",
               "version": "[6.0.0, )"
+            },
+            "MySql.Data.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[6.0.0, )"
             }
           },
           "imports": [
@@ -146,14 +150,14 @@
         }
       }
     },
-    "C:\\Users\\Excalibur\\Desktop\\ASPNET_Core_MVC\\Store\\Services\\Services.csproj": {
+    "c:\\Users\\Excalibur\\Desktop\\ASPNET_Core_MVC\\Store\\Services\\Services.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Excalibur\\Desktop\\ASPNET_Core_MVC\\Store\\Services\\Services.csproj",
+        "projectUniqueName": "c:\\Users\\Excalibur\\Desktop\\ASPNET_Core_MVC\\Store\\Services\\Services.csproj",
         "projectName": "Services",
-        "projectPath": "C:\\Users\\Excalibur\\Desktop\\ASPNET_Core_MVC\\Store\\Services\\Services.csproj",
+        "projectPath": "c:\\Users\\Excalibur\\Desktop\\ASPNET_Core_MVC\\Store\\Services\\Services.csproj",
         "packagesPath": "C:\\Users\\Excalibur\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Excalibur\\Desktop\\ASPNET_Core_MVC\\Store\\Services\\obj\\",
+        "outputPath": "c:\\Users\\Excalibur\\Desktop\\ASPNET_Core_MVC\\Store\\Services\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

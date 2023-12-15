@@ -14,20 +14,23 @@ namespace StoreApp.Infrastructure.Extensions
 {
     public static class ServiceExtension
     {
+
         public static void ConfigureDbContext(this IServiceCollection services, IConfiguration configuration)
         {
             services.AddDbContext<RepositoryContext>(options =>
             {
-                options.UseSqlServer(configuration.GetConnectionString("mssqlConnection"),   // .UseSqlite()    - "sqlConnection"   => sqlite db
-                    b => b.MigrationsAssembly("StoreApp"));                                  // .UseSqlServer() - "mssqlConnection" => mssql db
+                options.UseMySql(configuration.GetConnectionString("mysqlConnection"),                  // .UseSqlite()    - "sqlConnection"   => sqlite db
+                    ServerVersion.AutoDetect(configuration.GetConnectionString("mysqlConnection")),     // .UseSqlServer() - "mssqlConnection" => mssql db
+                    b => b.MigrationsAssembly("StoreApp"));                                             // .UseMySql()     - "mysqlConnection" => mysql db
 
                 options.EnableSensitiveDataLogging(true);
             });
         }
 
+
         public static void ConfigureIdentity(this IServiceCollection services)
         {
-            services.AddIdentity<IdentityUser, IdentityRole>(options => 
+            services.AddIdentity<IdentityUser, IdentityRole>(options =>
             {
                 options.SignIn.RequireConfirmedAccount = false;
                 options.User.RequireUniqueEmail = true;
@@ -71,7 +74,7 @@ namespace StoreApp.Infrastructure.Extensions
 
         public static void ConfigureRouting(this IServiceCollection services)
         {
-            services.AddRouting(options => 
+            services.AddRouting(options =>
             {
                 options.LowercaseUrls = true;       // a.../b...
                 options.AppendTrailingSlash = false;     // a.../b.../  =>  a.../b...
@@ -80,7 +83,7 @@ namespace StoreApp.Infrastructure.Extensions
 
         public static void ConfigureApplicationCookie(this IServiceCollection services)
         {
-            services.ConfigureApplicationCookie(options => 
+            services.ConfigureApplicationCookie(options =>
             {
                 options.LoginPath = new PathString("/Account/Login");
                 options.ReturnUrlParameter = CookieAuthenticationDefaults.ReturnUrlParameter;
